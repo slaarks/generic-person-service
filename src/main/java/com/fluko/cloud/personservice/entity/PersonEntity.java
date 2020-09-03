@@ -1,4 +1,4 @@
-package com.fluko.cloud.productservice.entity;
+package com.fluko.cloud.personservice.entity;
 
 import java.io.Serializable;
 
@@ -10,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "product")
-public class ProductEntity implements Serializable {
+@Table(name = "person")
+public class PersonEntity implements Serializable {
 	
 	private static final long serialVersionUID = -2343243243242432341L;
 	
@@ -19,11 +19,11 @@ public class ProductEntity implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
-	@Column(name = "description")
-	private String description;
+	@Column(name = "name")
+	private String name;
 	
-	@Column(name = "brand")
-	private String brand;
+	@Column(name = "email")
+	private String email;
 
 	public long getId() {
 		return id;
@@ -33,20 +33,19 @@ public class ProductEntity implements Serializable {
 		this.id = id;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getName() {
+		return name;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getBrand() {
-		return brand;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setBrand(String brand) {
-		this.brand = brand;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-
 }
